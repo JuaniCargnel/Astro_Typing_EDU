@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=2]
@@ -63,6 +63,15 @@ font_data = ExtResource( 1 )
 [sub_resource type="CircleShape2D" id=5]
 radius = 18.0
 
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=19]
+size = 39
+outline_size = 6
+outline_color = Color( 0.396078, 0.0117647, 0.47451, 1 )
+font_data = SubResource( 18 )
+
 [node name="PantallaPalabras" type="CanvasLayer"]
 script = ExtResource( 3 )
 
@@ -72,7 +81,7 @@ anchor_bottom = 1.0
 color = Color( 0.113725, 0.0705882, 0.203922, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1702.62, -130.097 )
+position = Vector2( -1702.62, -50.097 )
 scale = Vector2( 2.72764, 8.30496 )
 texture = ExtResource( 5 )
 offset = Vector2( 987.163, 80.0241 )
@@ -89,9 +98,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -569.0
-margin_top = -420.0
+margin_top = -340.0
 margin_right = 653.0
-margin_bottom = 392.0
+margin_bottom = 472.0
 color = Color( 0.227451, 0.137255, 0.415686, 1 )
 
 [node name="Palabras" type="Node" parent="."]
@@ -102,9 +111,9 @@ anchor_top = 0.164
 anchor_right = 0.515
 anchor_bottom = 0.164
 margin_left = -88.8
-margin_top = -17.12
+margin_top = 62.88
 margin_right = -20.8
-margin_bottom = 16.88
+margin_bottom = 96.88
 custom_fonts/font = SubResource( 3 )
 text = "Abc"
 
@@ -122,9 +131,9 @@ anchor_top = 0.321
 anchor_right = 0.28
 anchor_bottom = 0.321
 margin_left = -87.6
-margin_top = -16.68
+margin_top = 63.32
 margin_right = 89.4
-margin_bottom = 17.32
+margin_bottom = 97.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcd"
 
@@ -142,9 +151,9 @@ anchor_top = 0.479
 anchor_right = 0.281
 anchor_bottom = 0.479
 margin_left = 360.48
-margin_top = -187.32
+margin_top = -107.32
 margin_right = 538.48
-margin_bottom = -153.32
+margin_bottom = -73.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcde"
 
@@ -162,9 +171,9 @@ anchor_top = 0.636
 anchor_right = 0.282
 anchor_bottom = 0.636
 margin_left = 728.56
-margin_top = -356.88
+margin_top = -276.88
 margin_right = 909.56
-margin_bottom = -322.88
+margin_bottom = -242.88
 custom_fonts/font = SubResource( 3 )
 text = "Abcdef"
 
@@ -182,9 +191,9 @@ anchor_top = 0.794
 anchor_right = 0.28
 anchor_bottom = 0.794
 margin_left = -87.6
-margin_top = -357.52
+margin_top = -277.52
 margin_right = 89.4
-margin_bottom = -323.52
+margin_bottom = -243.52
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefg"
 
@@ -202,9 +211,9 @@ anchor_top = 0.321
 anchor_right = 0.516
 anchor_bottom = 0.321
 margin_left = -90.72
-margin_top = 153.32
+margin_top = 233.32
 margin_right = 89.28
-margin_bottom = 187.32
+margin_bottom = 267.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefgh"
 
@@ -222,9 +231,9 @@ anchor_top = 0.479
 anchor_right = 0.516
 anchor_bottom = 0.479
 margin_left = 279.28
-margin_top = -17.32
+margin_top = 62.68
 margin_right = 460.28
-margin_bottom = 16.68
+margin_bottom = 96.68
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghi"
 
@@ -242,9 +251,9 @@ anchor_top = 0.636
 anchor_right = 0.519
 anchor_bottom = 0.636
 margin_left = -546.48
-margin_top = -16.88
+margin_top = 63.12
 margin_right = -352.48
-margin_bottom = 17.12
+margin_bottom = 97.12
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghij"
 
@@ -262,9 +271,9 @@ anchor_top = 0.794
 anchor_right = 0.523
 anchor_bottom = 0.794
 margin_left = -104.16
-margin_top = -187.52
+margin_top = -107.52
 margin_right = 104.84
-margin_bottom = -153.52
+margin_bottom = -73.52
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghijk"
 
@@ -282,9 +291,9 @@ anchor_top = 0.321
 anchor_right = 0.718
 anchor_bottom = 0.321
 margin_left = -108.56
-margin_top = 323.32
+margin_top = 403.32
 margin_right = 109.44
-margin_bottom = 357.32
+margin_bottom = 437.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghijkl"
 
@@ -302,9 +311,9 @@ anchor_top = 0.479
 anchor_right = 0.726
 anchor_bottom = 0.479
 margin_left = -943.92
-margin_top = 322.68
+margin_top = 402.68
 margin_right = -694.92
-margin_bottom = 356.68
+margin_bottom = 436.68
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghijklm"
 
@@ -322,9 +331,9 @@ anchor_top = 0.636
 anchor_right = 0.732
 anchor_bottom = 0.636
 margin_left = -505.44
-margin_top = 153.12
+margin_top = 233.12
 margin_right = -234.44
-margin_bottom = 187.12
+margin_bottom = 267.12
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghijklmn"
 
@@ -342,9 +351,9 @@ anchor_top = 0.794
 anchor_right = 0.737
 anchor_bottom = 0.794
 margin_left = -145.04
-margin_top = -17.52
+margin_top = 62.48
 margin_right = 146.96
-margin_bottom = 16.48
+margin_bottom = 96.48
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefghijklmno"
 
@@ -363,19 +372,19 @@ anchor_left = 0.5
 anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
-margin_left = -940.0
-margin_top = -627.48
-margin_right = -608.0
-margin_bottom = -475.48
+margin_left = -969.0
+margin_top = -623.48
+margin_right = -637.0
+margin_bottom = -471.48
 texture_normal = ExtResource( 2 )
 
 [node name="MenuLabel" type="Label" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-margin_left = 118.0
-margin_top = 47.0
-margin_right = 259.0
-margin_bottom = 105.0
+margin_left = 89.0
+margin_top = 51.0
+margin_right = 230.0
+margin_bottom = 109.0
 custom_fonts/font = SubResource( 1 )
 text = "MENU"
 
@@ -386,19 +395,19 @@ anchor_left = 0.5
 anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
-margin_left = -940.0
-margin_top = -532.48
-margin_right = -608.0
-margin_bottom = -380.48
+margin_left = -969.0
+margin_top = -528.48
+margin_right = -637.0
+margin_bottom = -376.48
 texture_normal = ExtResource( 2 )
 
 [node name="ExitLabel" type="Label" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-margin_left = 108.667
-margin_top = 139.667
-margin_right = 258.667
-margin_bottom = 197.667
+margin_left = 79.667
+margin_top = 143.667
+margin_right = 229.667
+margin_bottom = 201.667
 custom_fonts/font = SubResource( 1 )
 text = "SALIR"
 
@@ -410,10 +419,27 @@ margin_right = -1571.0
 margin_bottom = -850.0
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 606, 233 )
+position = Vector2( 262, 278 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, -1 )
 shape = SubResource( 5 )
+
+[node name="SpriteGameOver" type="Sprite" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+position = Vector2( 300, -12 )
+scale = Vector2( 2.87398, 1.67376 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Titulo" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+margin_left = 492.0
+margin_top = 80.0
+margin_right = 1728.0
+margin_bottom = 175.0
+custom_fonts/font = SubResource( 19 )
+text = "DEFINICIONES DE LAS PALABRAS TRANSCRIPTAS"
 
 [connection signal="area_entered" from="Palabras/Label3/Area3" to="." method="_on_Area3_area_entered"]
 [connection signal="area_exited" from="Palabras/Label3/Area3" to="." method="_on_Area3_area_exited"]

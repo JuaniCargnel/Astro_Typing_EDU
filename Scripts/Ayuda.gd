@@ -7,7 +7,7 @@ func _on_Video_pressed():
 	$VideoPlayer.show()
 	$VideoPlayer.play()
 	
-func _process(delta):
+func _process(_delta):
 	if $VideoPlayer.is_playing():
 		$VideoPlayer/TextureButton.show()
 	else:

@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Extra/fondo.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/HUD_UI.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Extra/logo.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Extra/lugar.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Extra/lugar_otraopcion.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=6]
@@ -90,14 +89,6 @@ animations = [ {
 layer = -1
 script = ExtResource( 2 )
 
-[node name="Logo" type="Sprite" parent="."]
-modulate = Color( 0.494118, 0.556863, 0.596078, 1 )
-position = Vector2( 737, 85 )
-scale = Vector2( 1.5, 1.5 )
-z_index = 1
-texture = ExtResource( 3 )
-centered = false
-
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( -1.90735e-06, 0 )
 scale = Vector2( 0.48, 0.48 )
@@ -107,7 +98,7 @@ centered = false
 [node name="NombreJuego" type="Sprite" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-position = Vector2( 222, 153 )
+position = Vector2( 222, 74 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 centered = false
@@ -116,9 +107,9 @@ centered = false
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
 margin_left = 428.0
-margin_top = 284.0
+margin_top = 205.0
 margin_right = 1491.0
-margin_bottom = 447.0
+margin_bottom = 368.0
 custom_fonts/font = SubResource( 13 )
 text = "ASTRO TYPING"
 
@@ -206,9 +197,9 @@ anchor_top = 0.522
 anchor_right = 0.5
 anchor_bottom = 0.522
 margin_left = -249.0
-margin_top = -113.76
+margin_top = -69.76
 margin_right = 83.0
-margin_bottom = 38.24
+margin_bottom = 82.24
 rect_min_size = Vector2( 239, 88 )
 rect_scale = Vector2( 1.5, 1.5 )
 texture_normal = ExtResource( 6 )
@@ -217,9 +208,9 @@ texture_normal = ExtResource( 6 )
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
 margin_left = 850.0
-margin_top = 520.0
+margin_top = 564.0
 margin_right = 1089.0
-margin_bottom = 608.0
+margin_bottom = 652.0
 custom_fonts/font = SubResource( 4 )
 text = "JUGAR"
 
@@ -256,9 +247,9 @@ anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
 margin_left = -249.0
-margin_top = -27.48
+margin_top = 2.52002
 margin_right = 83.0
-margin_bottom = 124.52
+margin_bottom = 154.52
 rect_min_size = Vector2( 239, 88 )
 rect_scale = Vector2( 1.5, 1.5 )
 texture_normal = ExtResource( 6 )
@@ -266,10 +257,10 @@ texture_normal = ExtResource( 6 )
 [node name="HelpLabel" type="Label" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-margin_left = 850.0
-margin_top = 673.0
-margin_right = 1082.0
-margin_bottom = 761.0
+margin_left = 849.0
+margin_top = 701.0
+margin_right = 1081.0
+margin_bottom = 789.0
 custom_fonts/font = SubResource( 8 )
 text = "AYUDA"
 
@@ -287,7 +278,7 @@ one_shot = true
 one_shot = true
 
 [node name="Spawn1" type="AnimatedSprite" parent="."]
-position = Vector2( 300, 540 )
+position = Vector2( 301, 540 )
 scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 2 )
 animation = "Spawn"

@@ -48,7 +48,6 @@ func new_game():
 	$HUD_UI/HelpLabel.hide()
 	$HUD_UI/Exit.hide()
 	$HUD_UI/ExitLabel.hide()
-	$HUD_UI/Logo.hide()
 	$HUD_UI/TimeLabel.show()
 	$HUD_UI/ScoreLabel.show()
 	$HUD_UI/ShowLvL.show()
