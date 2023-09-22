@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Extra/Laser.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/HUD_UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GeneralControl.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48.5, 618 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 47.75, 618 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 955, 41 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 954, 37 )
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0, 0.574586, 1 )
+colors = PoolColorArray( 0.227451, 0.662745, 0.921569, 1, 0.0705882, 0.317647, 0.392157, 1, 0.0196078, 0.196078, 0.239216, 1, 0.0156863, 0.0823529, 0.14902, 1 )
+
+[node name="Main" type="Node"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_vertical_guides_": [ -195.0 ]
+}
+
+[node name="GeneralControl" parent="." instance=ExtResource( 6 )]
+
+[node name="HUD_UI" parent="." instance=ExtResource( 4 )]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="RightWall" type="Area2D" parent="Walls" groups=["derecha", "lateral"]]
+position = Vector2( 1908, 540 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall"]
+position = Vector2( 60.5, 4 )
+shape = SubResource( 2 )
+
+[node name="LeftWall" type="Area2D" parent="Walls" groups=["izquierda", "lateral"]]
+position = Vector2( 192, 540 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall"]
+position = Vector2( -37.25, 4 )
+shape = SubResource( 5 )
+
+[node name="DownWall" type="Area2D" parent="Walls" groups=["superiores"]]
+position = Vector2( 1041, 1068 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/DownWall"]
+position = Vector2( 21, 53 )
+shape = SubResource( 4 )
+
+[node name="TopWall" type="Area2D" parent="Walls" groups=["superiores"]]
+position = Vector2( 1063, -8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall"]
+position = Vector2( 0, -29 )
+shape = SubResource( 3 )
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="MobTimer" type="Timer" parent="Timers"]
+wait_time = 1.6
+
+[node name="Time" type="Timer" parent="Timers"]
+wait_time = 1.5
+
+[node name="StartTimer" type="Timer" parent="Timers"]
+
+[node name="SpawnAnimation1" type="Timer" parent="Timers"]
+
+[node name="SpawnAnimation2" type="Timer" parent="Timers"]
+
+[node name="SpawnAnimation3" type="Timer" parent="Timers"]
+
+[node name="SpawnAnimation4" type="Timer" parent="Timers"]
+
+[node name="SpawnAnimation5" type="Timer" parent="Timers"]
+
+[node name="SpawnAnimation6" type="Timer" parent="Timers"]
+
+[node name="Player" parent="." groups=["jugador"] instance=ExtResource( 1 )]
+position = Vector2( -71, -4 )
+
+[node name="Laser" type="RayCast2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="Laser"]
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 17.0
+default_color = Color( 0.0156863, 0.0823529, 0.14902, 1 )
+gradient = SubResource( 6 )
+texture = ExtResource( 3 )
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 1062.5, 540 )
+
+[node name="EnemyWord" type="Node2D" parent="."]
+position = Vector2( -3, 0 )
+
+[connection signal="start_game" from="HUD_UI" to="." method="new_game"]
+[connection signal="timeout" from="Timers/MobTimer" to="." method="_on_MobTimer_timeout"]
+[connection signal="timeout" from="Timers/Time" to="." method="_on_Time_timeout"]
+[connection signal="timeout" from="Timers/SpawnAnimation1" to="." method="_on_SpawnAnimation1_timeout"]
+[connection signal="timeout" from="Timers/SpawnAnimation2" to="." method="_on_SpawnAnimation2_timeout"]
+[connection signal="timeout" from="Timers/SpawnAnimation3" to="." method="_on_SpawnAnimation3_timeout"]
+[connection signal="timeout" from="Timers/SpawnAnimation4" to="." method="_on_SpawnAnimation4_timeout"]
+[connection signal="timeout" from="Timers/SpawnAnimation5" to="." method="_on_SpawnAnimation5_timeout"]
+[connection signal="timeout" from="Timers/SpawnAnimation6" to="." method="_on_SpawnAnimation6_timeout"]
+[connection signal="hit" from="Player" to="." method="game_over"]

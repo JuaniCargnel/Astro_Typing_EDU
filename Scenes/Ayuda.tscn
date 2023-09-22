@@ -1,0 +1,188 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Extra/fondo.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Ayuda.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Player/player-up-1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemy/enemigo2-1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Enemy/enemigo3-1.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Enemy/enemigo-1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Extra/lugar_otraopcion.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Extra/capturaTutorial (video-converter.com).webm" type="VideoStream" id=11]
+[ext_resource path="res://Assets/Extra/Cerrar.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+outline_size = 2
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+outline_size = 7
+outline_color = Color( 0.407843, 0.0705882, 0.509804, 1 )
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = SubResource( 4 )
+
+[node name="Ayuda" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 0.48, 0.48 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Menu" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -967.0
+margin_top = -641.48
+margin_right = -635.0
+margin_bottom = -489.48
+texture_normal = ExtResource( 2 )
+
+[node name="MenuLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 92.0
+margin_top = 33.0
+margin_right = 233.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+text = "MENU"
+
+[node name="Video" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -967.0
+margin_top = -534.48
+margin_right = -635.0
+margin_bottom = -382.48
+texture_normal = ExtResource( 2 )
+
+[node name="VideoLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 87.0
+margin_top = 140.0
+margin_right = 231.0
+margin_bottom = 259.0
+custom_fonts/font = SubResource( 1 )
+text = "VIDEO
+"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 340.0
+margin_top = 70.0
+margin_right = 1615.0
+margin_bottom = 930.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 80, 30, 344, 71 )
+patch_margin_top = 11
+patch_margin_bottom = 1
+
+[node name="Ayuda" type="Label" parent="."]
+modulate = Color( 0.521569, 0.0901961, 0.839216, 1 )
+margin_left = 535.0
+margin_top = 115.0
+margin_right = 1405.0
+margin_bottom = 215.0
+custom_fonts/font = SubResource( 3 )
+text = "AYUDA"
+align = 1
+
+[node name="Descripcion" type="Label" parent="."]
+margin_left = 365.0
+margin_top = 230.0
+margin_right = 1585.0
+margin_bottom = 296.0
+custom_fonts/font = SubResource( 5 )
+text = "El jugador         se moverá con las flechas direccionales.
+
+
+Deberá evitar las naves                     Si es tocado por una de ellas, morirá automáticamente.
+
+
+Las naves enemigas saldrán de los agujeros negros(      )en cualquier dirección. ¡Cuidado!
+
+
+Para destruir las naves se deberá escribir las palabras que se encuentran por debajo. La palabra activa será marcada por un láser y se coloreará de la siguiente manera: Verde las letras que ya fueron escritas, Amarillo la siguiente letra en la lista y Rojo las letras que faltan.
+
+
+Se podrá presionar la tecla TAB para cambiar entre palabras activas con la misma letra inicial (Por ejemplo GAMEPLAY y GANAR).
+
+
+Se podrá presionar la tecla DEL para cancelar la palabra que está activa (Esto no eliminará la palabra).
+
+
+Dentro de la partida se podrá presionar F5 para poner el modo pantalla completa y ESC para pausar el juego y controlar el volumen.
+
+
+Al final de la partida aparecerá una lista con algunas de las palabras que fueron \"destruidas\" junto con la definición de la misma."
+autowrap = true
+
+[node name="Jugador" type="Sprite" parent="."]
+position = Vector2( 490, 240 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Enemigo" type="Sprite" parent="."]
+position = Vector2( 700, 320 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Enemigo2" type="Sprite" parent="."]
+position = Vector2( 660, 320 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="Enemigo3" type="Sprite" parent="."]
+position = Vector2( 625, 320 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 9 )
+
+[node name="Spawn" type="Sprite" parent="."]
+position = Vector2( 902, 378 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
+margin_left = 489.0
+margin_top = 237.0
+margin_right = 1449.0
+margin_bottom = 777.0
+stream = ExtResource( 11 )
+volume_db = -80.0
+
+[node name="TextureButton" type="TextureButton" parent="VideoPlayer"]
+margin_left = 906.0
+margin_top = 8.0
+margin_right = 970.0
+margin_bottom = 72.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 12 )
+
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="Video" to="." method="_on_Video_pressed"]
+[connection signal="pressed" from="VideoPlayer/TextureButton" to="." method="_on_TextureButton_pressed"]

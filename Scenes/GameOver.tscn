@@ -1,0 +1,219 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Music/game-over.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+outline_size = 10
+outline_color = Color( 0.262745, 0.0823529, 0.34902, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+outline_size = 2
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+outline_size = 2
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+outline_size = 2
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 27
+font_data = SubResource( 8 )
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.113725, 0.0705882, 0.203922, 1 )
+
+[node name="SpriteGameOver" type="Sprite" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+position = Vector2( 41, -6 )
+scale = Vector2( 3.75813, 4.10638 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="MessageLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.455
+anchor_right = 0.5
+anchor_bottom = 0.455
+margin_left = -718.0
+margin_top = -333.4
+margin_right = 717.0
+margin_bottom = -82.4
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+align = 1
+autowrap = true
+
+[node name="Menu" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -210.0
+margin_top = -197.48
+margin_right = 122.0
+margin_bottom = -45.48
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Menu"]
+modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+margin_left = 98.0
+margin_top = 47.3333
+margin_right = 239.0
+margin_bottom = 105.333
+custom_fonts/font = SubResource( 3 )
+text = "MENU"
+
+[node name="Exit" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -210.0
+margin_top = 72.52
+margin_right = 122.0
+margin_bottom = 224.52
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Exit"]
+modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+margin_left = 88.6667
+margin_top = 44.6666
+margin_right = 238.667
+margin_bottom = 102.667
+custom_fonts/font = SubResource( 3 )
+text = "SALIR"
+
+[node name="Definiciones" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -210.0
+margin_top = -62.48
+margin_right = 122.0
+margin_bottom = 89.52
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Definiciones"]
+modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+margin_left = 74.6667
+margin_top = 59.3333
+margin_right = 278.667
+margin_bottom = 91.3333
+custom_fonts/font = SubResource( 5 )
+text = "DEFINICIONES"
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+
+[node name="Final" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="Final"]
+modulate = Color( 0.529412, 0.156863, 0.933333, 1 )
+margin_left = 295.0
+margin_top = 540.0
+margin_right = 525.0
+margin_bottom = 765.0
+
+[node name="Nivel" type="Label" parent="Final"]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 305.0
+margin_top = 560.0
+margin_right = 540.0
+margin_bottom = 589.0
+custom_fonts/font = SubResource( 7 )
+text = "Nivel: "
+
+[node name="Tiempo" type="Label" parent="Final"]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 305.0
+margin_top = 640.0
+margin_right = 540.0
+margin_bottom = 669.0
+custom_fonts/font = SubResource( 7 )
+text = "Tiempo:"
+
+[node name="Score" type="Label" parent="Final"]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 305.0
+margin_top = 720.0
+margin_right = 540.0
+margin_bottom = 749.0
+custom_fonts/font = SubResource( 7 )
+text = "Score:"
+
+[node name="NivelF" type="Label" parent="Final"]
+margin_left = 399.0
+margin_top = 563.0
+margin_right = 439.0
+margin_bottom = 589.0
+custom_fonts/font = SubResource( 9 )
+text = "0"
+
+[node name="TiempoF" type="Label" parent="Final"]
+margin_left = 429.0
+margin_top = 643.0
+margin_right = 469.0
+margin_bottom = 669.0
+custom_fonts/font = SubResource( 9 )
+text = "0"
+
+[node name="ScoreF" type="Label" parent="Final"]
+margin_left = 414.0
+margin_top = 723.0
+margin_right = 454.0
+margin_bottom = 749.0
+custom_fonts/font = SubResource( 9 )
+text = "0"
+
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Definiciones" to="." method="_on_Definiciones_pressed"]

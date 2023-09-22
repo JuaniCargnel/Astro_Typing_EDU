@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Enemy/enemigo3-1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemy/enemigo2-2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemy/enemigo-2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemy/enemigo2-1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Enemy/enemigo-1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemy/enemigo3-2.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Enemy2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Enemy3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Enemy1",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 59, 52.5 )
+
+[sub_resource type="DynamicFontData" id=29]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=30]
+size = 26
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 29 )
+
+[sub_resource type="RectangleShape2D" id=27]
+resource_local_to_scene = true
+extents = Vector2( 61, 66.5 )
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+position = Vector2( 40, 40 )
+z_index = 10
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -35, -9 )
+rotation = 1.5708
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 1 )
+animation = "Enemy1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -7, -9.5 )
+shape = SubResource( 28 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -157.0
+margin_top = 45.0
+margin_right = 143.0
+margin_bottom = 75.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 30 )
+text = "TEXTO"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AreaMob" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMob"]
+position = Vector2( -7, 2.5 )
+shape = SubResource( 27 )
+
+[connection signal="area_entered" from="AreaMob" to="." method="_on_AreaMob_area_entered"]

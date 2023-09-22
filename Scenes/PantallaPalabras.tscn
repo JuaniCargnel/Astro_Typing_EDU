@@ -1,0 +1,445 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/PantallaPalabras.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/ToolTip.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 41.5, 17.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 46.5, 18 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 64, 17.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 73.5, 18.5 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 79.5, 19.25 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 92.5, 19.25 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 96, 19.25 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 100, 21.625 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 107.5, 22.125 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 113, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 128, 20.625 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 139, 20.625 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 151, 22.8125 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+outline_size = 2
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 18.0
+
+[node name="PantallaPalabras" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.113725, 0.0705882, 0.203922, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1702.62, -130.097 )
+scale = Vector2( 2.72764, 8.30496 )
+texture = ExtResource( 5 )
+offset = Vector2( 987.163, 80.0241 )
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+position = Vector2( 999.562, 80.7922 )
+rotation = 4.71239
+scale = Vector2( 0.205203, 4.31671 )
+texture = ExtResource( 5 )
+
+[node name="Background2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -569.0
+margin_top = -420.0
+margin_right = 653.0
+margin_bottom = 392.0
+color = Color( 0.227451, 0.137255, 0.415686, 1 )
+
+[node name="Palabras" type="Node" parent="."]
+
+[node name="Label3" type="Label" parent="Palabras"]
+anchor_left = 0.515
+anchor_top = 0.164
+anchor_right = 0.515
+anchor_bottom = 0.164
+margin_left = -88.8
+margin_top = -17.12
+margin_right = -20.8
+margin_bottom = 16.88
+custom_fonts/font = SubResource( 3 )
+text = "Abc"
+
+[node name="Area3" type="Area2D" parent="Palabras/Label3"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label3/Area3"]
+position = Vector2( 3.50012, -0.500015 )
+shape = SubResource( 6 )
+
+[node name="Label4" type="Label" parent="Palabras"]
+anchor_left = 0.28
+anchor_top = 0.321
+anchor_right = 0.28
+anchor_bottom = 0.321
+margin_left = -87.6
+margin_top = -16.68
+margin_right = 89.4
+margin_bottom = 17.32
+custom_fonts/font = SubResource( 3 )
+text = "Abcd"
+
+[node name="Area4" type="Area2D" parent="Palabras/Label4"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label4/Area4"]
+position = Vector2( 13.5, -2.00003 )
+shape = SubResource( 7 )
+
+[node name="Label5" type="Label" parent="Palabras"]
+anchor_left = 0.281
+anchor_top = 0.479
+anchor_right = 0.281
+anchor_bottom = 0.479
+margin_left = 360.48
+margin_top = -187.32
+margin_right = 538.48
+margin_bottom = -153.32
+custom_fonts/font = SubResource( 3 )
+text = "Abcde"
+
+[node name="Area5" type="Area2D" parent="Palabras/Label5"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label5/Area5"]
+position = Vector2( 23, -1.5 )
+shape = SubResource( 8 )
+
+[node name="Label6" type="Label" parent="Palabras"]
+anchor_left = 0.282
+anchor_top = 0.636
+anchor_right = 0.282
+anchor_bottom = 0.636
+margin_left = 728.56
+margin_top = -356.88
+margin_right = 909.56
+margin_bottom = -322.88
+custom_fonts/font = SubResource( 3 )
+text = "Abcdef"
+
+[node name="Area6" type="Area2D" parent="Palabras/Label6"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label6/Area6"]
+position = Vector2( 33.5, -0.499878 )
+shape = SubResource( 9 )
+
+[node name="Label7" type="Label" parent="Palabras"]
+anchor_left = 0.28
+anchor_top = 0.794
+anchor_right = 0.28
+anchor_bottom = 0.794
+margin_left = -87.6
+margin_top = -357.52
+margin_right = 89.4
+margin_bottom = -323.52
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefg"
+
+[node name="Area7" type="Area2D" parent="Palabras/Label7"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label7/Area7"]
+position = Vector2( 44.5, 1.5 )
+shape = SubResource( 10 )
+
+[node name="Label8" type="Label" parent="Palabras"]
+anchor_left = 0.516
+anchor_top = 0.321
+anchor_right = 0.516
+anchor_bottom = 0.321
+margin_left = -90.72
+margin_top = 153.32
+margin_right = 89.28
+margin_bottom = 187.32
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefgh"
+
+[node name="Area8" type="Area2D" parent="Palabras/Label8"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label8/Area8"]
+position = Vector2( 52.5001, 1.74997 )
+shape = SubResource( 11 )
+
+[node name="Label9" type="Label" parent="Palabras"]
+anchor_left = 0.516
+anchor_top = 0.479
+anchor_right = 0.516
+anchor_bottom = 0.479
+margin_left = 279.28
+margin_top = -17.32
+margin_right = 460.28
+margin_bottom = 16.68
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghi"
+
+[node name="Area9" type="Area2D" parent="Palabras/Label9"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label9/Area9"]
+position = Vector2( 60.0001, 1 )
+shape = SubResource( 12 )
+
+[node name="Label10" type="Label" parent="Palabras"]
+anchor_left = 0.519
+anchor_top = 0.636
+anchor_right = 0.519
+anchor_bottom = 0.636
+margin_left = -546.48
+margin_top = -16.88
+margin_right = -352.48
+margin_bottom = 17.12
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghij"
+
+[node name="Area10" type="Area2D" parent="Palabras/Label10"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label10/Area10"]
+position = Vector2( 64.0001, 1.37512 )
+shape = SubResource( 13 )
+
+[node name="Label11" type="Label" parent="Palabras"]
+anchor_left = 0.523
+anchor_top = 0.794
+anchor_right = 0.523
+anchor_bottom = 0.794
+margin_left = -104.16
+margin_top = -187.52
+margin_right = 104.84
+margin_bottom = -153.52
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghijk"
+
+[node name="Area11" type="Area2D" parent="Palabras/Label11"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label11/Area11"]
+position = Vector2( 72.5, 1.125 )
+shape = SubResource( 14 )
+
+[node name="Label12" type="Label" parent="Palabras"]
+anchor_left = 0.718
+anchor_top = 0.321
+anchor_right = 0.718
+anchor_bottom = 0.321
+margin_left = -108.56
+margin_top = 323.32
+margin_right = 109.44
+margin_bottom = 357.32
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghijkl"
+
+[node name="Area12" type="Area2D" parent="Palabras/Label12"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label12/Area12"]
+position = Vector2( 79, 0.499969 )
+shape = SubResource( 15 )
+
+[node name="Label13" type="Label" parent="Palabras"]
+anchor_left = 0.726
+anchor_top = 0.479
+anchor_right = 0.726
+anchor_bottom = 0.479
+margin_left = -943.92
+margin_top = 322.68
+margin_right = -694.92
+margin_bottom = 356.68
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghijklm"
+
+[node name="Area13" type="Area2D" parent="Palabras/Label13"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label13/Area13"]
+position = Vector2( 93, 1.625 )
+shape = SubResource( 16 )
+
+[node name="Label14" type="Label" parent="Palabras"]
+anchor_left = 0.732
+anchor_top = 0.636
+anchor_right = 0.732
+anchor_bottom = 0.636
+margin_left = -505.44
+margin_top = 153.12
+margin_right = -234.44
+margin_bottom = 187.12
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghijklmn"
+
+[node name="Area14" type="Area2D" parent="Palabras/Label14"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label14/Area14"]
+position = Vector2( 104, 1.00012 )
+shape = SubResource( 17 )
+
+[node name="Label15" type="Label" parent="Palabras"]
+anchor_left = 0.737
+anchor_top = 0.794
+anchor_right = 0.737
+anchor_bottom = 0.794
+margin_left = -145.04
+margin_top = -17.52
+margin_right = 146.96
+margin_bottom = 16.48
+custom_fonts/font = SubResource( 3 )
+text = "Abcdefghijklmno"
+
+[node name="Area15" type="Area2D" parent="Palabras/Label15"]
+position = Vector2( 32, 15 )
+z_index = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Palabras/Label15/Area15"]
+position = Vector2( 117, 1.8125 )
+shape = SubResource( 4 )
+
+[node name="Menu" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -940.0
+margin_top = -627.48
+margin_right = -608.0
+margin_bottom = -475.48
+texture_normal = ExtResource( 2 )
+
+[node name="MenuLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 118.0
+margin_top = 47.0
+margin_right = 259.0
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 1 )
+text = "MENU"
+
+[node name="Exit" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -940.0
+margin_top = -532.48
+margin_right = -608.0
+margin_bottom = -380.48
+texture_normal = ExtResource( 2 )
+
+[node name="ExitLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 108.667
+margin_top = 139.667
+margin_right = 258.667
+margin_bottom = 197.667
+custom_fonts/font = SubResource( 1 )
+text = "SALIR"
+
+[node name="Control" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = 49.0
+margin_top = 30.0
+margin_right = -1571.0
+margin_bottom = -850.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 606, 233 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 5 )
+
+[connection signal="area_entered" from="Palabras/Label3/Area3" to="." method="_on_Area3_area_entered"]
+[connection signal="area_exited" from="Palabras/Label3/Area3" to="." method="_on_Area3_area_exited"]
+[connection signal="area_entered" from="Palabras/Label4/Area4" to="." method="_on_Area4_area_entered"]
+[connection signal="area_exited" from="Palabras/Label4/Area4" to="." method="_on_Area4_area_exited"]
+[connection signal="area_entered" from="Palabras/Label5/Area5" to="." method="_on_Area5_area_entered"]
+[connection signal="area_exited" from="Palabras/Label5/Area5" to="." method="_on_Area5_area_exited"]
+[connection signal="area_entered" from="Palabras/Label6/Area6" to="." method="_on_Area6_area_entered"]
+[connection signal="area_exited" from="Palabras/Label6/Area6" to="." method="_on_Area6_area_exited"]
+[connection signal="area_entered" from="Palabras/Label7/Area7" to="." method="_on_Area7_area_entered"]
+[connection signal="area_exited" from="Palabras/Label7/Area7" to="." method="_on_Area7_area_exited"]
+[connection signal="area_entered" from="Palabras/Label8/Area8" to="." method="_on_Area8_area_entered"]
+[connection signal="area_exited" from="Palabras/Label8/Area8" to="." method="_on_Area8_area_exited"]
+[connection signal="area_entered" from="Palabras/Label9/Area9" to="." method="_on_Area9_area_entered"]
+[connection signal="area_exited" from="Palabras/Label9/Area9" to="." method="_on_Area9_area_exited"]
+[connection signal="area_entered" from="Palabras/Label10/Area10" to="." method="_on_Area10_area_entered"]
+[connection signal="area_exited" from="Palabras/Label10/Area10" to="." method="_on_Area10_area_exited"]
+[connection signal="area_entered" from="Palabras/Label11/Area11" to="." method="_on_Area11_area_entered"]
+[connection signal="area_exited" from="Palabras/Label11/Area11" to="." method="_on_Area11_area_exited"]
+[connection signal="area_entered" from="Palabras/Label12/Area12" to="." method="_on_Area12_area_entered"]
+[connection signal="area_exited" from="Palabras/Label12/Area12" to="." method="_on_Area12_area_exited"]
+[connection signal="area_entered" from="Palabras/Label13/Area13" to="." method="_on_Area13_area_entered"]
+[connection signal="area_exited" from="Palabras/Label13/Area13" to="." method="_on_Area13_area_exited"]
+[connection signal="area_entered" from="Palabras/Label14/Area14" to="." method="_on_Area14_area_entered"]
+[connection signal="area_exited" from="Palabras/Label14/Area14" to="." method="_on_Area14_area_exited"]
+[connection signal="area_entered" from="Palabras/Label15/Area15" to="." method="_on_Area15_area_entered"]
+[connection signal="area_exited" from="Palabras/Label15/Area15" to="." method="_on_Area15_area_exited"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

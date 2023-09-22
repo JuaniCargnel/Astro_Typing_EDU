@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3-dc9a6e47f4f99fdbb945466ee0d7e5e7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3"
+dest_files=[ "res://.import/kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3-dc9a6e47f4f99fdbb945466ee0d7e5e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

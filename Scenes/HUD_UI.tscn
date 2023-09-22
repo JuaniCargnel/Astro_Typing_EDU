@@ -1,0 +1,330 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Extra/fondo.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/HUD_UI.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Extra/logo.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Extra/lugar.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Extra/lugar_otraopcion.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Extra/fullscreen.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 130
+outline_size = 9
+outline_color = Color( 0.313726, 0.0705882, 0.431373, 1 )
+font_data = SubResource( 12 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 3
+outline_color = Color( 0.360784, 0.0705882, 0.509804, 1 )
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 160
+outline_size = 10
+outline_color = Color( 0.262745, 0.0823529, 0.34902, 1 )
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=14]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+size = 50
+outline_size = 5
+outline_color = Color( 0.262745, 0.0823529, 0.34902, 1 )
+font_data = SubResource( 14 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 65
+outline_size = 4
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 65
+outline_size = 4
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 65
+outline_size = 4
+outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
+font_data = SubResource( 7 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Spawn",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Spawn",
+"speed": 5.0
+} ]
+
+[node name="HUD_UI" type="CanvasLayer"]
+layer = -1
+script = ExtResource( 2 )
+
+[node name="Logo" type="Sprite" parent="."]
+modulate = Color( 0.494118, 0.556863, 0.596078, 1 )
+position = Vector2( 737, 85 )
+scale = Vector2( 1.5, 1.5 )
+z_index = 1
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -1.90735e-06, 0 )
+scale = Vector2( 0.48, 0.48 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="NombreJuego" type="Sprite" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+position = Vector2( 222, 153 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="NombreJuegoLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+margin_left = 428.0
+margin_top = 284.0
+margin_right = 1491.0
+margin_bottom = 447.0
+custom_fonts/font = SubResource( 13 )
+text = "ASTRO TYPING"
+
+[node name="Panel" type="ColorRect" parent="."]
+margin_right = 205.0
+margin_bottom = 1080.0
+color = Color( 0.707242, 0.45694, 0.847656, 0.180392 )
+
+[node name="TimeLabel" type="Label" parent="."]
+modulate = Color( 0.419608, 0.223529, 0.8, 1 )
+anchor_left = 0.509
+anchor_top = 0.094
+anchor_right = 0.527
+anchor_bottom = 0.094
+margin_left = -968.28
+margin_top = -36.52
+margin_right = -731.28
+margin_bottom = 20.48
+custom_fonts/font = SubResource( 1 )
+text = "Time: 0"
+
+[node name="ScoreLabel" type="Label" parent="."]
+modulate = Color( 0.419608, 0.223529, 0.8, 1 )
+anchor_left = 0.509
+anchor_top = 0.094
+anchor_right = 0.527
+anchor_bottom = 0.094
+margin_left = -968.28
+margin_top = 13.48
+margin_right = -705.28
+margin_bottom = 70.48
+custom_fonts/font = SubResource( 1 )
+text = "Score: 0"
+
+[node name="ShowLvL" type="Label" parent="."]
+modulate = Color( 0.419608, 0.223529, 0.8, 1 )
+anchor_left = 0.509
+anchor_top = 0.094
+anchor_right = 0.527
+anchor_bottom = 0.094
+margin_left = -968.28
+margin_top = -86.52
+margin_right = -731.28
+margin_bottom = -29.52
+custom_fonts/font = SubResource( 1 )
+text = "Level: 0"
+
+[node name="MessageLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+anchor_left = 0.5
+anchor_top = 0.455
+anchor_right = 0.5
+anchor_bottom = 0.455
+margin_left = -555.0
+margin_top = -1135.4
+margin_right = 684.0
+margin_bottom = -884.4
+custom_fonts/font = SubResource( 11 )
+text = "COMIENZA!"
+align = 1
+autowrap = true
+
+[node name="LevelLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+anchor_left = 0.5
+anchor_top = 0.455
+anchor_right = 0.5
+anchor_bottom = 0.455
+margin_left = -182.0
+margin_top = -825.4
+margin_right = 332.0
+margin_bottom = -725.4
+custom_fonts/font = SubResource( 15 )
+text = "LEVEL"
+align = 1
+autowrap = true
+
+[node name="Start" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.522
+anchor_right = 0.5
+anchor_bottom = 0.522
+margin_left = -249.0
+margin_top = -113.76
+margin_right = 83.0
+margin_bottom = 38.24
+rect_min_size = Vector2( 239, 88 )
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 6 )
+
+[node name="StartLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 850.0
+margin_top = 520.0
+margin_right = 1089.0
+margin_bottom = 608.0
+custom_fonts/font = SubResource( 4 )
+text = "JUGAR"
+
+[node name="Exit" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -249.0
+margin_top = 123.52
+margin_right = 83.0
+margin_bottom = 275.52
+rect_min_size = Vector2( 239, 88 )
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 6 )
+
+[node name="ExitLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 850.0
+margin_top = 822.0
+margin_right = 1065.0
+margin_bottom = 904.0
+custom_fonts/font = SubResource( 6 )
+text = "SALIR"
+
+[node name="Help" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -249.0
+margin_top = -27.48
+margin_right = 83.0
+margin_bottom = 124.52
+rect_min_size = Vector2( 239, 88 )
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 6 )
+
+[node name="HelpLabel" type="Label" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+margin_left = 850.0
+margin_top = 673.0
+margin_right = 1082.0
+margin_bottom = 761.0
+custom_fonts/font = SubResource( 8 )
+text = "AYUDA"
+
+[node name="FullScreen" type="TextureButton" parent="."]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 77.0
+margin_bottom = 77.0
+texture_normal = ExtResource( 9 )
+
+[node name="MessageTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="LevelTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Spawn1" type="AnimatedSprite" parent="."]
+position = Vector2( 300, 540 )
+scale = Vector2( 1.2, 1.2 )
+frames = SubResource( 2 )
+animation = "Spawn"
+
+[node name="Spawn2" type="AnimatedSprite" parent="."]
+position = Vector2( 1800, 540 )
+scale = Vector2( 1.2, 1.2 )
+frames = SubResource( 3 )
+animation = "Spawn"
+
+[node name="Spawn3" type="AnimatedSprite" parent="."]
+position = Vector2( 300, 120 )
+scale = Vector2( 1.2, 1.2 )
+frames = SubResource( 3 )
+animation = "Spawn"
+
+[node name="Spawn4" type="AnimatedSprite" parent="."]
+position = Vector2( 1800, 960 )
+scale = Vector2( 1.2, 1.2 )
+frames = SubResource( 3 )
+animation = "Spawn"
+
+[node name="Spawn5" type="AnimatedSprite" parent="."]
+position = Vector2( 300, 960 )
+scale = Vector2( 1.2, 1.2 )
+frames = SubResource( 3 )
+animation = "Spawn"
+
+[node name="Spawn6" type="AnimatedSprite" parent="."]
+position = Vector2( 1800, 120 )
+scale = Vector2( 1.2, 1.2 )
+frames = SubResource( 3 )
+animation = "Spawn"
+
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_Help_pressed"]
+[connection signal="pressed" from="FullScreen" to="." method="_on_FullScreen_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_LevelTimer_timeout"]
