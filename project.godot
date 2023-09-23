@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Astro Typing"
 config/description="A 2D game in which you have to help a little alien who must destroy and dodge ships by typing the words that appear below them."
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/PantallaPresentacion.tscn"
 config/icon="res://Logo_UNL.png"
 
 [autoload]
