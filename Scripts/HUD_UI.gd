@@ -5,7 +5,7 @@ signal start_game
 var fullscreen: bool = false
 var start: bool = false
 
-var texturaExFull = load("res://Assets/Extra/exit-full-screen.png")
+var texturaExFull = load("res://Assets/Extra/exit_fullscreen.png")
 var texturaFull = load("res://Assets/Extra/fullscreen.png")
 
 func _ready():

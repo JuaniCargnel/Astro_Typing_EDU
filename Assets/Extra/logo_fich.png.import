@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_sinnombre.png-93eac5bb7da29b2a74dac86f413e9612.stex"
+path="res://.import/logo_fich.png-530c3f9e2fdf56f845ac07d87310bbe9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extra/fondo_sinnombre.png"
-dest_files=[ "res://.import/fondo_sinnombre.png-93eac5bb7da29b2a74dac86f413e9612.stex" ]
+source_file="res://Assets/Extra/logo_fich.png"
+dest_files=[ "res://.import/logo_fich.png-530c3f9e2fdf56f845ac07d87310bbe9.stex" ]
 
 [params]
 

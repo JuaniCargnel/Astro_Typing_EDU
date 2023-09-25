@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lugar_otraopcion.png-fa60c529fc9cb0cf44c09edcd66251f1.stex"
+path="res://.import/marco_titulo.png-351130ed748251dfeccf97069d71d654.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extra/lugar_otraopcion.png"
-dest_files=[ "res://.import/lugar_otraopcion.png-fa60c529fc9cb0cf44c09edcd66251f1.stex" ]
+source_file="res://Assets/Extra/marco_titulo.png"
+dest_files=[ "res://.import/marco_titulo.png-351130ed748251dfeccf97069d71d654.stex" ]
 
 [params]
 

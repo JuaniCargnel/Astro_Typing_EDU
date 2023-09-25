@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exit-full-screen.png-90389e21715f6972502bd6a3c1a42695.stex"
+path="res://.import/exit_fullscreen.png-b6c430c718498199b1af198478112aaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extra/exit-full-screen.png"
-dest_files=[ "res://.import/exit-full-screen.png-90389e21715f6972502bd6a3c1a42695.stex" ]
+source_file="res://Assets/Extra/exit_fullscreen.png"
+dest_files=[ "res://.import/exit_fullscreen.png-b6c430c718498199b1af198478112aaa.stex" ]
 
 [params]
 

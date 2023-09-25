@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Select_purple.png-8aaa34808c5556652cd2cbdf62c296b6.stex"
+path="res://.import/logo_ead.png-a5ef8117e8a7b870a119cfc9ceb8c3fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extra/Select_purple.png"
-dest_files=[ "res://.import/Select_purple.png-8aaa34808c5556652cd2cbdf62c296b6.stex" ]
+source_file="res://Assets/Extra/logo_ead.png"
+dest_files=[ "res://.import/logo_ead.png-a5ef8117e8a7b870a119cfc9ceb8c3fc.stex" ]
 
 [params]
 

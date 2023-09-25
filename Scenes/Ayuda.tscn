@@ -5,13 +5,13 @@
 [ext_resource path="res://Assets/Extra/fondo.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/Ayuda.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Player/player-up-1.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Extra/marco.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Enemy/enemigo2-1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Enemy/enemigo3-1.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Enemy/enemigo-1.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Extra/lugar_otraopcion.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Extra/capturaTutorial (video-converter.com).webm" type="VideoStream" id=11]
-[ext_resource path="res://Assets/Extra/Cerrar.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Extra/spawnB.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Extra/capturaTutorial.webm" type="VideoStream" id=11]
+[ext_resource path="res://Assets/Extra/cerrar.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -43,6 +43,25 @@ position = Vector2( -1.90735e-06, 0 )
 scale = Vector2( 0.48, 0.48 )
 texture = ExtResource( 3 )
 centered = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 340.0
+margin_top = 70.0
+margin_right = 1615.0
+margin_bottom = 930.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 58.0125, 57.2832, 1830.3, 1795.77 )
+patch_margin_bottom = 1
+
+[node name="ColorRect" type="ColorRect" parent="NinePatchRect"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 34.0
+margin_top = 23.0
+margin_right = -35.0
+margin_bottom = -7.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="Menu" type="TextureButton" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
@@ -92,16 +111,6 @@ margin_bottom = 267.0
 custom_fonts/font = SubResource( 1 )
 text = "VIDEO
 "
-
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_left = 340.0
-margin_top = 70.0
-margin_right = 1615.0
-margin_bottom = 930.0
-texture = ExtResource( 6 )
-region_rect = Rect2( 80, 30, 344, 71 )
-patch_margin_top = 11
-patch_margin_bottom = 1
 
 [node name="Ayuda" type="Label" parent="."]
 modulate = Color( 0.521569, 0.0901961, 0.839216, 1 )

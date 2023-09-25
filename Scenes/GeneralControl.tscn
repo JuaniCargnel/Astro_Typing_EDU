@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/GeneralControl.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Extra/marco_titulo.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Music/kim-lightyear-leave-the-world-tonight-chiptune-edit-loop-132102.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=4]
 

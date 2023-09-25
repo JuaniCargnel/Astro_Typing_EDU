@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lugar.png-a5499351094043c8acd49878eb70235b.stex"
+path="res://.import/marco.png-70386700aed1f73a5e9136d70ceb91bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extra/lugar.png"
-dest_files=[ "res://.import/lugar.png-a5499351094043c8acd49878eb70235b.stex" ]
+source_file="res://Assets/Extra/marco.png"
+dest_files=[ "res://.import/marco.png-70386700aed1f73a5e9136d70ceb91bf.stex" ]
 
 [params]
 

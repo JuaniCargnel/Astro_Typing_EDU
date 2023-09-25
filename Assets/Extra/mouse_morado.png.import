@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nombre2.png-ec1a4560d06e72ba1ac442d9c562e206.stex"
+path="res://.import/mouse_morado.png-54559d6f54223288aaa2b634a87634f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extra/nombre2.png"
-dest_files=[ "res://.import/nombre2.png-ec1a4560d06e72ba1ac442d9c562e206.stex" ]
+source_file="res://Assets/Extra/mouse_morado.png"
+dest_files=[ "res://.import/mouse_morado.png-54559d6f54223288aaa2b634a87634f7.stex" ]
 
 [params]
 

@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Assets/Extra/fondo.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/HUD_UI.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Extra/lugar.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Extra/lugar_otraopcion.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Extra/spawnB.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Extra/spawnA.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Extra/marco_titulo.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Extra/fullscreen.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFontData" id=12]
