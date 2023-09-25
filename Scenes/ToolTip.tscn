@@ -44,8 +44,10 @@ margin_right = 1181.0
 margin_bottom = 680.0
 
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
-margin_right = 1166.0
-margin_bottom = 16.0
+margin_left = 200.0
+margin_top = 60.0
+margin_right = 1366.0
+margin_bottom = 76.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )

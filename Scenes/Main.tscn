@@ -92,7 +92,6 @@ position = Vector2( -71, -4 )
 [node name="Line2D" type="Line2D" parent="Laser"]
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 17.0
-default_color = Color( 0.0156863, 0.0823529, 0.14902, 1 )
 gradient = SubResource( 6 )
 texture = ExtResource( 3 )
 

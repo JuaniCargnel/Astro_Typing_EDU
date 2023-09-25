@@ -32,7 +32,7 @@ font_data = SubResource( 2 )
 font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=5]
-size = 20
+size = 19
 font_data = SubResource( 4 )
 
 [node name="Ayuda" type="CanvasLayer"]
@@ -57,10 +57,10 @@ patch_margin_bottom = 1
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 34.0
-margin_top = 23.0
-margin_right = -35.0
-margin_bottom = -7.0
+margin_left = 8.0
+margin_top = 10.0
+margin_right = -16.0
+margin_bottom = -1.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Menu" type="TextureButton" parent="."]
@@ -123,57 +123,52 @@ text = "AYUDA"
 align = 1
 
 [node name="Descripcion" type="Label" parent="."]
-margin_left = 365.0
-margin_top = 230.0
-margin_right = 1585.0
-margin_bottom = 296.0
+margin_left = 469.0
+margin_top = 289.0
+margin_right = 1506.0
+margin_bottom = 907.0
 custom_fonts/font = SubResource( 5 )
-text = "El jugador         se moverá con las flechas direccionales.
+text = "OBJETIVO:
+Destruir las naves                    . Para ello, el jugador          deberá escribir las palabras que se encuentran por debajo. 
+
+La palabra activa será marcada por un láser y se coloreará de la siguiente manera: VERDE, las letras que ya fueron escritas; AMARILLO, la siguiente letra en la lista y ROJO, las letras que faltan.
 
 
-Deberá evitar las naves                     Si es tocado por una de ellas, morirá automáticamente.
+1- El jugador podrá moverse con las flechas direccionales.
+
+2- Deberá evitar las naves. Si es tocado por una de ellas, morirá automáticamente.
+
+3- Las naves enemigas saldrán de los agujeros negros         en cualquier dirección. ¡Cuidado!
 
 
-Las naves enemigas saldrán de los agujeros negros(      )en cualquier dirección. ¡Cuidado!
-
-
-Para destruir las naves se deberá escribir las palabras que se encuentran por debajo. La palabra activa será marcada por un láser y se coloreará de la siguiente manera: Verde las letras que ya fueron escritas, Amarillo la siguiente letra en la lista y Rojo las letras que faltan.
-
-
-Se podrá presionar la tecla TAB para cambiar entre palabras activas con la misma letra inicial (Por ejemplo GAMEPLAY y GANAR).
-
-
-Se podrá presionar la tecla DEL para cancelar la palabra que está activa (Esto no eliminará la palabra).
-
-
-Dentro de la partida se podrá presionar F5 para poner el modo pantalla completa y ESC para pausar el juego y controlar el volumen.
-
-
-Al final de la partida aparecerá una lista con algunas de las palabras que fueron \"destruidas\" junto con la definición de la misma."
+* Se podrá presionar la tecla TAB para cambiar entre palabras activas con la misma letra inicial (Por ejemplo GAMEPLAY y GANAR).
+* Se podrá presionar la tecla DEL para cancelar la palabra que está activa (esto no eliminará dicha palabra).
+* Dentro de la partida se podrá presionar F5 para poner el modo pantalla completa y ESC para pausar el juego y controlar el volumen.
+* Al final de la partida aparecerá una lista con algunas de las palabras que fueron \"destruidas\" junto con la definición de la misma."
 autowrap = true
 
 [node name="Jugador" type="Sprite" parent="."]
-position = Vector2( 490, 240 )
+position = Vector2( 1001, 318 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 5 )
 
 [node name="Enemigo" type="Sprite" parent="."]
-position = Vector2( 700, 320 )
+position = Vector2( 743.65, 329.45 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Enemigo2" type="Sprite" parent="."]
-position = Vector2( 660, 320 )
+position = Vector2( 703.65, 329.45 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
 [node name="Enemigo3" type="Sprite" parent="."]
-position = Vector2( 625, 320 )
+position = Vector2( 668.65, 329.45 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 9 )
 
 [node name="Spawn" type="Sprite" parent="."]
-position = Vector2( 902, 378 )
+position = Vector2( 1021, 549 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 10 )
 

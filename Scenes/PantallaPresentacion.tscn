@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/PantallaPresentacion.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Extra/logo_fich.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Extra/logo_ead.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Extra/pantalla_inicio_Mesa de trabajo 1.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Inicio"
@@ -95,6 +96,11 @@ texture = ExtResource( 2 )
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1394, 240 )
 texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+scale = Vector2( 0.48, 0.48 )
+texture = ExtResource( 4 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
