@@ -97,11 +97,11 @@ text = "SONIDO"
 [node name="Menu" type="TextureButton" parent="Sprite"]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-margin_left = 711.0
-margin_top = 506.0
-margin_right = 1043.0
-margin_bottom = 658.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 724.0
+margin_top = 515.0
+margin_right = 1298.0
+margin_bottom = 745.0
+rect_scale = Vector2( 0.25, 0.25 )
 texture_normal = ExtResource( 4 )
 
 [node name="MenuLabel" type="Label" parent="Sprite"]
@@ -117,11 +117,11 @@ text = "MENU
 [node name="Continuar" type="TextureButton" parent="Sprite"]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-margin_left = 845.0
-margin_top = 608.0
-margin_right = 1177.0
-margin_bottom = 760.0
-rect_scale = Vector2( 0.7, 0.7 )
+margin_left = 850.0
+margin_top = 615.0
+margin_right = 1424.0
+margin_bottom = 845.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 
 [node name="ContinuarLabel" type="Label" parent="Sprite"]

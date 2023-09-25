@@ -38,20 +38,12 @@ func _ready():
 # Conecta la señal que emite el "HUD_UI" con "Main"
 func new_game():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	$HUD_UI/Panel.show()
-	$HUD_UI/FullScreen.hide()
-	$HUD_UI/NombreJuego.hide()
-	$HUD_UI/NombreJuegoLabel.hide()
-	$HUD_UI/Start.hide()
-	$HUD_UI/StartLabel.hide()
-	$HUD_UI/Help.hide()
-	$HUD_UI/HelpLabel.hide()
-	$HUD_UI/Exit.hide()
-	$HUD_UI/ExitLabel.hide()
+	$HUD_UI/ReadyLabel.hide()
 	$HUD_UI/TimeLabel.show()
 	$HUD_UI/ScoreLabel.show()
 	$HUD_UI/ShowLvL.show()
 	$HUD_UI/Spawn1.show()
+	$Player.show()
 	$HUD_UI.show_message("COMIENZA!")
 	level += 1
 	$HUD_UI.show_level("NIVEL 1")

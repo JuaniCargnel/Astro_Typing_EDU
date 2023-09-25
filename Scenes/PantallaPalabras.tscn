@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/Fonts/Game Of Squids.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Extra/boton.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/PantallaPalabras.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/ToolTip.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Extra/fondo_sinnombre.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Extra/juego fondo-03.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
@@ -80,18 +81,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.113725, 0.0705882, 0.203922, 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1702.62, -50.097 )
-scale = Vector2( 2.72764, 8.30496 )
-texture = ExtResource( 5 )
-offset = Vector2( 987.163, 80.0241 )
-
-[node name="Sprite" type="Sprite" parent="Sprite"]
-position = Vector2( 999.562, 80.7922 )
-rotation = 4.71239
-scale = Vector2( 0.205203, 4.31671 )
-texture = ExtResource( 5 )
-
 [node name="Background2" type="ColorRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -101,7 +90,12 @@ margin_left = -569.0
 margin_top = -340.0
 margin_right = 653.0
 margin_bottom = 472.0
-color = Color( 0.227451, 0.137255, 0.415686, 1 )
+color = Color( 0.0980392, 0.027451, 0.243137, 1 )
+
+[node name="Background3" type="Sprite" parent="."]
+position = Vector2( 1008.5, 607.25 )
+scale = Vector2( 0.680206, 0.448586 )
+texture = ExtResource( 6 )
 
 [node name="Palabras" type="Node" parent="."]
 
@@ -132,7 +126,7 @@ anchor_right = 0.28
 anchor_bottom = 0.321
 margin_left = -87.6
 margin_top = 63.32
-margin_right = 89.4
+margin_right = 2.40002
 margin_bottom = 97.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcd"
@@ -152,7 +146,7 @@ anchor_right = 0.281
 anchor_bottom = 0.479
 margin_left = 360.48
 margin_top = -107.32
-margin_right = 538.48
+margin_right = 471.48
 margin_bottom = -73.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcde"
@@ -172,7 +166,7 @@ anchor_right = 0.282
 anchor_bottom = 0.636
 margin_left = 728.56
 margin_top = -276.88
-margin_right = 909.56
+margin_right = 856.56
 margin_bottom = -242.88
 custom_fonts/font = SubResource( 3 )
 text = "Abcdef"
@@ -192,7 +186,7 @@ anchor_right = 0.28
 anchor_bottom = 0.794
 margin_left = -87.6
 margin_top = -277.52
-margin_right = 89.4
+margin_right = 62.4
 margin_bottom = -243.52
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefg"
@@ -212,7 +206,7 @@ anchor_right = 0.516
 anchor_bottom = 0.321
 margin_left = -90.72
 margin_top = 233.32
-margin_right = 89.28
+margin_right = 81.28
 margin_bottom = 267.32
 custom_fonts/font = SubResource( 3 )
 text = "Abcdefgh"
@@ -372,10 +366,11 @@ anchor_left = 0.5
 anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
-margin_left = -969.0
-margin_top = -623.48
-margin_right = -637.0
-margin_bottom = -471.48
+margin_left = -945.0
+margin_top = -605.48
+margin_right = -371.0
+margin_bottom = -375.48
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 2 )
 
 [node name="MenuLabel" type="Label" parent="."]
@@ -395,19 +390,20 @@ anchor_left = 0.5
 anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
-margin_left = -969.0
-margin_top = -528.48
-margin_right = -637.0
-margin_bottom = -376.48
+margin_left = -945.0
+margin_top = -490.48
+margin_right = -371.0
+margin_bottom = -260.48
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 2 )
 
 [node name="ExitLabel" type="Label" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
 margin_left = 79.667
-margin_top = 143.667
+margin_top = 165.667
 margin_right = 229.667
-margin_bottom = 201.667
+margin_bottom = 223.667
 custom_fonts/font = SubResource( 1 )
 text = "SALIR"
 

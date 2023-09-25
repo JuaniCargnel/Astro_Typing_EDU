@@ -51,18 +51,19 @@ anchor_left = 0.5
 anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
-margin_left = -967.0
-margin_top = -641.48
-margin_right = -635.0
-margin_bottom = -489.48
+margin_left = -945.0
+margin_top = -621.48
+margin_right = -371.0
+margin_bottom = -391.48
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 2 )
 
 [node name="MenuLabel" type="Label" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-margin_left = 92.0
+margin_left = 90.0
 margin_top = 33.0
-margin_right = 233.0
+margin_right = 231.0
 margin_bottom = 91.0
 custom_fonts/font = SubResource( 1 )
 text = "MENU"
@@ -74,19 +75,20 @@ anchor_left = 0.5
 anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
-margin_left = -967.0
-margin_top = -534.48
-margin_right = -635.0
-margin_bottom = -382.48
+margin_left = -945.0
+margin_top = -508.48
+margin_right = -371.0
+margin_bottom = -278.48
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 2 )
 
 [node name="VideoLabel" type="Label" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
 margin_left = 87.0
-margin_top = 140.0
+margin_top = 148.0
 margin_right = 231.0
-margin_bottom = 259.0
+margin_bottom = 267.0
 custom_fonts/font = SubResource( 1 )
 text = "VIDEO
 "

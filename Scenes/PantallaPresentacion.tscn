@@ -1,55 +1,59 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/PantallaPresentacion.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Extra/logo.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Extra/Marca_EaD_FICH_UNL-02.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Inicio"
-step = 1.0
-tracks/0/type = "method"
-tracks/0/path = NodePath("AnimationPlayer/Label")
+length = 2.5
+step = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"values": [  ]
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimationPlayer/Label:percent_visible")
+tracks/1/path = NodePath("Label:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( -0.0738726, 0.989895 ),
-"transitions": PoolRealArray( 1, 0.999999 ),
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 
 [sub_resource type="Animation" id=4]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("AnimationPlayer/Label:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
 
-[sub_resource type="DynamicFontData" id=2]
-font_path = "res://Assets/Fonts/Game Of Squids.ttf"
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=3]
-size = 80
-font_data = SubResource( 2 )
+[sub_resource type="DynamicFont" id=8]
+size = 50
+font_data = SubResource( 7 )
 
 [node name="PantallaPresentacion" type="Control"]
 anchor_right = 1.0
@@ -65,19 +69,32 @@ color = Color( 0, 0, 0, 1 )
 anims/Inicio = SubResource( 1 )
 anims/RESET = SubResource( 4 )
 
-[node name="Label" type="Label" parent="AnimationPlayer"]
-margin_left = 358.0
-margin_top = 485.0
-margin_right = 1368.0
-margin_bottom = 585.0
-custom_fonts/font = SubResource( 3 )
-text = "ESTO ES UNA PRUEBA"
-percent_visible = 0.0
+[node name="Label" type="Label" parent="."]
+margin_left = 145.0
+margin_top = 583.0
+margin_right = 1823.0
+margin_bottom = 886.0
+custom_fonts/font = SubResource( 8 )
+text = "Programación: Cargnel Juan Ignacio - Estudiante Avanzado
+
+Gráficos: Verónica Duran
+
+Pruebas de Juego: Sebastián Teitelman - Director de la Carrera / Walter Sotil - Codirector de la Carrera"
+autowrap = true
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true
 autostart = true
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 471, 240 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1394, 240 )
+texture = ExtResource( 3 )
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
-[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_started"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

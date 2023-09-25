@@ -170,12 +170,12 @@ func _on_Exit_pressed():
 	get_tree().quit()
 	
 func _on_Menu_pressed():
-	return get_tree().change_scene_to(mainScene)
+	get_tree().call_deferred("change_scene", "res://Scenes/PantallaPresentacion.tscn")
 	
 func _on_Area3_area_entered(_area):
 	if visible3 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1040,160))
+		$Control.set_global_position(Vector2($Palabras/Label3.rect_position.x + $Palabras/Label3.rect_size.x + 10, $Palabras/Label3.rect_position.y))
 		for x in palabras.words.size():
 			if palabras3[switch3] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -186,7 +186,7 @@ func _on_Area3_area_exited(_area):
 func _on_Area4_area_entered(_area):
 	if visible4 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(565,325))
+		$Control.set_global_position(Vector2($Palabras/Label4.rect_position.x + $Palabras/Label4.rect_size.x + 10, $Palabras/Label4.rect_position.y))
 		for x in palabras.words.size():
 			if palabras4[switch4] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -197,7 +197,7 @@ func _on_Area4_area_exited(_area):
 func _on_Area5_area_entered(_area):
 	if visible5 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1030,325)) 
+		$Control.set_global_position(Vector2($Palabras/Label5.rect_position.x + $Palabras/Label5.rect_size.x + 10, $Palabras/Label5.rect_position.y))
 		for x in palabras.words.size():
 			if palabras5[switch5] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -208,7 +208,7 @@ func _on_Area5_area_exited(_area):
 func _on_Area6_area_entered(_area):
 	if visible6 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1425,325))
+		$Control.set_global_position(Vector2($Palabras/Label6.rect_position.x + $Palabras/Label6.rect_size.x + 10, $Palabras/Label6.rect_position.y))
 		for x in palabras.words.size():
 			if palabras6[switch6] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -219,7 +219,7 @@ func _on_Area6_area_exited(_area):
 func _on_Area7_area_entered(_area):
 	if visible7 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(615,495)) 
+		$Control.set_global_position(Vector2($Palabras/Label7.rect_position.x + $Palabras/Label7.rect_size.x + 10, $Palabras/Label7.rect_position.y))
 		for x in palabras.words.size():
 			if palabras7[switch7] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -230,7 +230,7 @@ func _on_Area7_area_exited(_area):
 func _on_Area8_area_entered(_area):
 	if visible8 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1090,495)) 
+		$Control.set_global_position(Vector2($Palabras/Label8.rect_position.x + $Palabras/Label8.rect_size.x + 10, $Palabras/Label8.rect_position.y))
 		for x in palabras.words.size():
 			if palabras8[switch8] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -241,7 +241,7 @@ func _on_Area8_area_exited(_area):
 func _on_Area9_area_entered(_area):
 	if visible9 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1465,495)) 
+		$Control.set_global_position(Vector2($Palabras/Label9.rect_position.x + $Palabras/Label9.rect_size.x + 10, $Palabras/Label9.rect_position.y))
 		for x in palabras.words.size():
 			if palabras9[switch9] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -252,7 +252,7 @@ func _on_Area9_area_exited(_area):
 func _on_Area10_area_entered(_area):
 	if visible10 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(655,665)) 
+		$Control.set_global_position(Vector2($Palabras/Label10.rect_position.x + $Palabras/Label10.rect_size.x + 10, $Palabras/Label10.rect_position.y))
 		for x in palabras.words.size():
 			if palabras10[switch10] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -263,7 +263,7 @@ func _on_Area10_area_exited(_area):
 func _on_Area11_area_entered(_area):
 	if visible11 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1130,665)) 
+		$Control.set_global_position(Vector2($Palabras/Label11.rect_position.x + $Palabras/Label11.rect_size.x + 10, $Palabras/Label11.rect_position.y))
 		for x in palabras.words.size():
 			if palabras11[switch11] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -274,7 +274,7 @@ func _on_Area11_area_exited(_area):
 func _on_Area12_area_entered(_area):
 	if visible12 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1505,665)) 
+		$Control.set_global_position(Vector2($Palabras/Label12.rect_position.x + $Palabras/Label12.rect_size.x + 10, $Palabras/Label12.rect_position.y))
 		for x in palabras.words.size():
 			if palabras12[switch12] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -285,7 +285,7 @@ func _on_Area12_area_exited(_area):
 func _on_Area13_area_entered(_area):
 	if visible13 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(715,835)) 
+		$Control.set_global_position(Vector2($Palabras/Label13.rect_position.x + $Palabras/Label13.rect_size.x + 10, $Palabras/Label13.rect_position.y))
 		for x in palabras.words.size():
 			if palabras13[switch13] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -296,7 +296,7 @@ func _on_Area13_area_exited(_area):
 func _on_Area14_area_entered(_area):
 	if visible14 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1185,835))
+		$Control.set_global_position(Vector2($Palabras/Label14.rect_position.x + $Palabras/Label14.rect_size.x + 10, $Palabras/Label14.rect_position.y))
 		for x in palabras.words.size():
 			if palabras14[switch14] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)
@@ -307,7 +307,7 @@ func _on_Area14_area_exited(_area):
 func _on_Area15_area_entered(_area):
 	if visible15 == true:
 		$Control.visible = true
-		$Control.set_global_position(Vector2(1580,835))
+		$Control.set_global_position(Vector2($Palabras/Label15.rect_position.x + $Palabras/Label15.rect_size.x + 10, $Palabras/Label15.rect_position.y))
 		for x in palabras.words.size():
 			if palabras15[switch15] == palabras.words[x]:
 				$Control/NinePatchRect/MarginContainer/VBoxContainer/Label.text = definiciones.get_definition(x)

@@ -1,7 +1,9 @@
 extends CanvasLayer
 
 signal start_game
+
 var fullscreen: bool = false
+var start: bool = false
 
 var texturaExFull = load("res://Assets/Extra/exit-full-screen.png")
 var texturaFull = load("res://Assets/Extra/fullscreen.png")
@@ -46,7 +48,18 @@ func show_level(text):
 
 # Al presionar el boton "Start" emite una señal que conecta con "Main"
 func _on_Start_pressed(): 
-	emit_signal("start_game")
+	$Panel.show()
+	$FullScreen.hide()
+	$NombreJuego.hide()
+	$NombreJuegoLabel.hide()
+	$Start.hide()
+	$StartLabel.hide()
+	$Help.hide()
+	$HelpLabel.hide()
+	$Exit.hide()
+	$ExitLabel.hide()
+	$ReadyLabel.rect_position = Vector2(95,275)
+	$StartTimer.start()
 
 # Cierra la ventana la presionar el boton "Exit"
 func _on_Exit_pressed():
@@ -74,4 +87,5 @@ func _on_FullScreen_pressed():
 		fullscreen = false
 		$FullScreen.set_normal_texture(texturaFull)
 
-
+func _on_StartTimer_timeout():
+	emit_signal("start_game")

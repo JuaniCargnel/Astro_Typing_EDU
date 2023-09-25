@@ -17,7 +17,7 @@ func _on_Exit_pressed():
 	get_tree().quit()
 	
 func _on_Menu_pressed():
-	return get_tree().change_scene_to(mainScene)
+	get_tree().call_deferred("change_scene", "res://Scenes/PantallaPresentacion.tscn")
 	
 func _on_Definiciones_pressed():
 	return get_tree().change_scene_to(definiciones)

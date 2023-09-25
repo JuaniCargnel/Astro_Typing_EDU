@@ -13,7 +13,7 @@ outline_color = Color( 0.262745, 0.0823529, 0.34902, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 45
+size = 90
 outline_size = 2
 outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
 font_data = ExtResource( 1 )
@@ -22,7 +22,7 @@ font_data = ExtResource( 1 )
 font_path = "res://Assets/Fonts/Game Of Squids.ttf"
 
 [sub_resource type="DynamicFont" id=5]
-size = 24
+size = 50
 outline_size = 2
 outline_color = Color( 0.223529, 0.0352941, 0.309804, 1 )
 font_data = SubResource( 4 )
@@ -83,45 +83,21 @@ anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
 margin_left = -210.0
-margin_top = -197.48
-margin_right = 122.0
-margin_bottom = -45.48
-rect_scale = Vector2( 1.5, 1.5 )
+margin_top = -155.48
+margin_right = 364.0
+margin_bottom = 74.52
+rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Menu"]
 modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
 self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
-margin_left = 98.0
-margin_top = 47.3333
-margin_right = 239.0
-margin_bottom = 105.333
+margin_left = 147.143
+margin_top = 57.1429
+margin_right = 428.143
+margin_bottom = 171.143
 custom_fonts/font = SubResource( 3 )
 text = "MENU"
-
-[node name="Exit" type="TextureButton" parent="."]
-modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
-self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
-anchor_left = 0.5
-anchor_top = 0.581
-anchor_right = 0.5
-anchor_bottom = 0.581
-margin_left = -210.0
-margin_top = 72.52
-margin_right = 122.0
-margin_bottom = 224.52
-rect_scale = Vector2( 1.5, 1.5 )
-texture_normal = ExtResource( 4 )
-
-[node name="Label" type="Label" parent="Exit"]
-modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
-self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
-margin_left = 88.6667
-margin_top = 44.6666
-margin_right = 238.667
-margin_bottom = 102.667
-custom_fonts/font = SubResource( 3 )
-text = "SALIR"
 
 [node name="Definiciones" type="TextureButton" parent="."]
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
@@ -131,21 +107,45 @@ anchor_top = 0.581
 anchor_right = 0.5
 anchor_bottom = 0.581
 margin_left = -210.0
-margin_top = -62.48
-margin_right = 122.0
-margin_bottom = 89.52
-rect_scale = Vector2( 1.5, 1.5 )
+margin_top = 5.52002
+margin_right = 364.0
+margin_bottom = 235.52
+rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Definiciones"]
 modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
 self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
-margin_left = 74.6667
-margin_top = 59.3333
-margin_right = 278.667
-margin_bottom = 91.3333
+margin_left = 94.2857
+margin_top = 82.8571
+margin_right = 472.286
+margin_bottom = 145.857
 custom_fonts/font = SubResource( 5 )
 text = "DEFINICIONES"
+
+[node name="Exit" type="TextureButton" parent="."]
+modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
+self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
+anchor_left = 0.5
+anchor_top = 0.581
+anchor_right = 0.5
+anchor_bottom = 0.581
+margin_left = -210.0
+margin_top = 164.52
+margin_right = 364.0
+margin_bottom = 394.52
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Exit"]
+modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
+self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
+margin_left = 130.0
+margin_top = 57.1428
+margin_right = 429.0
+margin_bottom = 171.143
+custom_fonts/font = SubResource( 3 )
+text = "SALIR"
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
@@ -215,5 +215,5 @@ custom_fonts/font = SubResource( 9 )
 text = "0"
 
 [connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
 [connection signal="pressed" from="Definiciones" to="." method="_on_Definiciones_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
