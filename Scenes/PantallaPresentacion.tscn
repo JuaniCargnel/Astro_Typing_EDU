@@ -1,106 +1,21 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/PantallaPresentacion.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Extra/logo_fich.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Extra/logo_ead.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Extra/pantalla_inicio_Mesa de trabajo 1.png" type="Texture" id=4]
-
-[sub_resource type="Animation" id=1]
-resource_name = "Inicio"
-length = 2.5
-step = 2.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Label:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite2:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 2.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-length = 0.001
-
-[sub_resource type="DynamicFontData" id=7]
-font_path = "res://Assets/Fonts/Aldrich-Regular.ttf"
-
-[sub_resource type="DynamicFont" id=8]
-size = 50
-font_data = SubResource( 7 )
 
 [node name="PantallaPresentacion" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Inicio = SubResource( 1 )
-anims/RESET = SubResource( 4 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 145.0
-margin_top = 583.0
-margin_right = 1823.0
-margin_bottom = 886.0
-custom_fonts/font = SubResource( 8 )
-text = "Programación: Cargnel Juan Ignacio - Estudiante Avanzado
-
-Gráficos: Verónica Duran
-
-Pruebas de Juego: Sebastián Teitelman - Director de la Carrera / Walter Sotil - Codirector de la Carrera"
-autowrap = true
-
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.5
 one_shot = true
 autostart = true
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 471, 240 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
-
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 1394, 240 )
-texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
 scale = Vector2( 0.48, 0.48 )
 texture = ExtResource( 4 )
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
