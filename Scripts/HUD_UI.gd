@@ -16,9 +16,9 @@ func _ready():
 		$FullScreen.set_normal_texture(texturaFull)
 		fullscreen = false
 
-func _process(_delta):
-	if Input.is_action_pressed("ui_accept") and $Start.is_visible_in_tree():
-		emit_signal("start_game")
+#func _process(_delta):
+#	if Input.is_action_pressed("ui_accept") and $Start.is_visible_in_tree():
+#		emit_signal("start_game")
 
 # Actualiza el "TimeLabel" 
 func update_time(time): 

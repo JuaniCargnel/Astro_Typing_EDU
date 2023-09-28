@@ -288,7 +288,7 @@ func spawn_enemy():
 				$HUD_UI/Spawn6.play()
 				$Timers/SpawnAnimation6.start()
 			
-	enemyActiveWords[enemyQueue] = enemyInstance.get_prompt()
+	enemyAlctiveWords[enemyQueue] = enemyInstance.get_prompt()
 	enemyQueue += 1
 
 # Cada vez que se termina el tiempo predefinido WAIT TIME: Instancia nuevo enemigo
