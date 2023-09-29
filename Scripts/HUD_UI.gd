@@ -61,9 +61,9 @@ func _on_Start_pressed():
 	$ReadyLabel.rect_position = Vector2(95,275)
 	$StartTimer.start()
 
-# Cierra la ventana la presionar el boton "Exit"
-func _on_Exit_pressed():
-	get_tree().quit()
+## Cierra la ventana la presionar el boton "Exit"
+#func _on_Exit_pressed():
+#	get_tree().quit()
 
 func _on_Help_pressed():
 	var helpScene = preload("res://Scenes/Ayuda.tscn")

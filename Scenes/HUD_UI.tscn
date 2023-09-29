@@ -265,6 +265,7 @@ custom_fonts/font = SubResource( 8 )
 text = "AYUDA"
 
 [node name="Exit" type="TextureButton" parent="."]
+visible = false
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
 anchor_left = 0.5
@@ -280,6 +281,7 @@ rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 6 )
 
 [node name="ExitLabel" type="Label" parent="."]
+visible = false
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
 margin_left = 848.0

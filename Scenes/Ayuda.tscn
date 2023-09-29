@@ -9,7 +9,7 @@
 [ext_resource path="res://Assets/Enemy/enemigo2-1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Enemy/enemigo3-1.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Enemy/enemigo-1.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Extra/spawnB.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Extra/spawnA.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Extra/capturaTutorial.webm" type="VideoStream" id=11]
 [ext_resource path="res://Assets/Extra/cerrar.png" type="Texture" id=12]
 
@@ -168,7 +168,7 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 9 )
 
 [node name="Spawn" type="Sprite" parent="."]
-position = Vector2( 1021, 549 )
+position = Vector2( 1020, 550 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 10 )
 

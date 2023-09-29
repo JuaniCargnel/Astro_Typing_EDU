@@ -13,8 +13,8 @@ func _ready():
 	$Final/NivelF.text = str(valoresE.nivel)
 	$Final/TiempoF.text = str(valoresE.tiempo)
 	
-func _on_Exit_pressed():
-	get_tree().quit()
+#func _on_Exit_pressed():
+#	get_tree().quit()
 	
 func _on_Menu_pressed():
 	get_tree().call_deferred("change_scene", "res://Scenes/PantallaPresentacion.tscn")

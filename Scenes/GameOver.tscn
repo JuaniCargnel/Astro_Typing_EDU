@@ -124,6 +124,7 @@ custom_fonts/font = SubResource( 5 )
 text = "DEFINICIONES"
 
 [node name="Exit" type="TextureButton" parent="."]
+visible = false
 modulate = Color( 0.533333, 0.0862745, 0.870588, 1 )
 self_modulate = Color( 0.941176, 0.34902, 0.34902, 1 )
 anchor_left = 0.5
@@ -138,6 +139,7 @@ rect_scale = Vector2( 0.7, 0.7 )
 texture_normal = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Exit"]
+visible = false
 modulate = Color( 0.811765, 0.729412, 0.87451, 1 )
 self_modulate = Color( 0.976471, 0.501961, 0.501961, 1 )
 margin_left = 130.0
