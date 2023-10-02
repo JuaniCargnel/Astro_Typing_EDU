@@ -166,8 +166,8 @@ func _ready():
 func _process(_delta):
 	$Area2D.position = get_viewport().get_mouse_position()
 
-func _on_Exit_pressed():
-	get_tree().quit()
+#func _on_Exit_pressed():
+#	get_tree().quit()
 	
 func _on_Menu_pressed():
 	get_tree().call_deferred("change_scene", "res://Scenes/PantallaPresentacion.tscn")
